@@ -7,7 +7,7 @@
   top: 0px;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,12 +24,12 @@
   align-items: center;
 }
 
-.login::after{
+.login::after {
   content: '';
   display: inline-block;
   width: 14px;
   height: 17px;
-  background: url(../Assets/usuario.svg) no-repeat center center;
+  background: url('../Assets/usuario.svg') no-repeat center center;
   margin-left: 0.5rem;
   position: relative;
   top: -1px;

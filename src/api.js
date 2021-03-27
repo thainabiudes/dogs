@@ -6,10 +6,22 @@ export function TOKEN_POST(body) {
     options: {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Headers': '*'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(body),
+    },
+  };
+}
+
+export function TOKEN_VALIDATE_POST(token) {
+  return {
+    url: API_URL + '/jwt-auth/v1/tokenvalidate',
+    options: {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer' + token,
+      },
+      body: JSON.stringify(token),
     },
   };
 }
@@ -22,6 +34,20 @@ export function USER_GET(token) {
       headers: {
         Authorization: 'Bearer ' + token,
       },
+    },
+  };
+}
+
+
+export function USER_POST(body) {
+  return {
+    url: API_URL + '/api/user',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body),
     },
   };
 }

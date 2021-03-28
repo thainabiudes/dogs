@@ -8,24 +8,24 @@
 .login::before {
   display: block;
   content: "";
-  background: url(../../Assets/login.jpg) no-repeat center center;
+  background: url("../../Assets/login.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .forms {
-  max-width: 30rem;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 20vh;
 }
 
 @media (max-width: 40rem) {
   .login {
     grid-template-columns: 1fr;
   }
-
-  .login {
+  .login::before {
     display: none;
   }
-
   .forms {
     max-width: 100%;
   }
